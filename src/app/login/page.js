@@ -33,7 +33,7 @@ export default function Login() {
         if (token) {
           localStorage.setItem("token", token);
           alert("Login successful!");
-          router.push("/users");
+          router.push("/admin/dashbaord");
         } else {
           alert("Error retrieving token.");
         }

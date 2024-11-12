@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import userimg from "../../../user.png";
+import userimg from "../../../../user.png";
 
 export default function UserDetails() {
   const params = useParams();
@@ -54,7 +54,7 @@ export default function UserDetails() {
   };
 
   const handleBackButtonClick = () => {
-    router.push("/users");
+    router.push("/admin/dashbaord");
   };
 
   if (loading) {

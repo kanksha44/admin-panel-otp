@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import userimg from "../../user.png";
+import userimg from "../../../user.png";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
-export default function Users() {
+export default function Dashboard() {
   const router = useRouter();
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -43,7 +43,7 @@ export default function Users() {
 
   const userPage = (id) => {
     console.log("id", id);
-    router.push(`/users/${id}`);
+    router.push(`/admin/users/${id}`);
   };
 
   if (loading) {
